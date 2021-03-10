@@ -15,6 +15,7 @@
             <property name="hibernate.show_sql" value="true"/><!--DB에 나가는 쿼리를 보여줄지 말껀지-->
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>
+            <property name="hibernate.jdbc.batch_size" value="10"/><!--size만큼 모아서 DB에 한번에 쿼리를 보내고 commit(버퍼링 같은 기능)-->
             <!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
         </properties>
     </persistence-unit>
