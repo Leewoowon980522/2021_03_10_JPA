@@ -40,3 +40,15 @@
 	</ul>
 	<li>하이버네이트는 40가지 이상의 데이터베이스 방언 지원</li>
 </ul>
+<h2>JPA 구동방식</h2>
+<img src="https://user-images.githubusercontent.com/76415175/110696729-c7f8a600-822e-11eb-84e0-277cf0ab471f.PNG">
+<ul>
+	<li>@Entity : JPA가 관리할 객체</li>
+	<li>@Id : 데이터베이스 PK와 매핑</li>
+</ul>
+<h2>주의 사항</h2>
+<ul>
+	<li>엔티티 매니저 팩토리는 하나만 생성해서 애플리케이션 전체에서 공유</li>
+	<li>엔티티 매니저는 쓰레드간에 공유X (사용하고 버려야 한다).</li>
+	<li>JPA의 모든 데이터 변경은 트랜잭션 안에서 실행</li>
+</ul>
