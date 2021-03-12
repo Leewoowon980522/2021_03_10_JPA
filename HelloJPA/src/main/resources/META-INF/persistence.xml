@@ -16,7 +16,7 @@
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>
             <property name="hibernate.jdbc.batch_size" value="10"/><!--size만큼 모아서 DB에 한번에 쿼리를 보내고 commit(버퍼링 같은 기능)-->
-            <!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
+            <property name="hibernate.hbm2ddl.auto" value="create" /><!--update는 추가된것은 반영되지만 삭제된것은 반영되지 않음-->
         </properties>
     </persistence-unit>
 </persistence>

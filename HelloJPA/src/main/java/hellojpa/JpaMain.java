@@ -24,7 +24,7 @@ public class JpaMain {
             member.setName("HelloB");
             em.persist(member);//저장
             */
-            Member findMember = em.find(Member.class,2L);
+            //Member findMember = em.find(Member.class,2L);
             /* 값 find
             System.out.println("findMember id = " + findMember.getId());
             System.out.println("findMember name = " + findMember.getName());
@@ -32,6 +32,16 @@ public class JpaMain {
             //em.remove(findMember); 찾은 id로 DB에서 삭제
             //findMember.setName("HelloJPA");
             // JPA를 통해 Entity를 가져오면 JPA가 관리를 하는데 Transaction이 커밋하는 시점에서 변동사항이 있으면 UPDATE 커밋을 날리기 때문에값이 바뀜
+/*
+            Member member = em.find(Member.class,150L);
+            member.setName("ZZZZ");
+
+            System.out.println("=============");
+            */
+            Member member = new Member();
+            //member.setId("ID_A");
+            member.setName("C");
+            em.persist(member);
             tx.commit();
         }catch(Exception e){
             tx.rollback();
