@@ -3,7 +3,7 @@ package jpabook.jpasjop.domain;
 import javax.persistence.*;
 
 @Entity
-public class Delivery {
+public class Delivery extends BaseEntity{
     @Id @GeneratedValue
     private long id;
 

@@ -1,3 +1,4 @@
+import jpabook.jpasjop.domain.Book;
 import jpabook.jpasjop.domain.Order;
 import jpabook.jpasjop.domain.OrderItem;
 
@@ -13,8 +14,11 @@ public class JpaMain {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         try{
-            Order order = new Order();
-            order.addOrderItem(new OrderItem());
+            Book book = new Book();
+            book.setName("책이름");
+            book.setAutor("저자");
+            em.persist(book);
+
 
             tx.commit();
         }catch(Exception e){
